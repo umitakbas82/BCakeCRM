@@ -32,8 +32,13 @@
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
             lstCustomers = new ListBox();
+            txtFirstName = new TextBox();
+            txtLastName = new TextBox();
+            txtPhone = new TextBox();
+            dgvSales = new DataGridView();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSales).BeginInit();
             SuspendLayout();
             // 
             // tabControl1
@@ -48,6 +53,10 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(dgvSales);
+            tabPage1.Controls.Add(txtPhone);
+            tabPage1.Controls.Add(txtLastName);
+            tabPage1.Controls.Add(txtFirstName);
             tabPage1.Controls.Add(lstCustomers);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
@@ -77,6 +86,41 @@
             lstCustomers.Size = new Size(164, 520);
             lstCustomers.TabIndex = 0;
             // 
+            // txtFirstName
+            // 
+            txtFirstName.Location = new Point(183, 11);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.PlaceholderText = "Ad";
+            txtFirstName.Size = new Size(100, 23);
+            txtFirstName.TabIndex = 1;
+            // 
+            // txtLastName
+            // 
+            txtLastName.Location = new Point(289, 11);
+            txtLastName.Name = "txtLastName";
+            txtLastName.PlaceholderText = "Soyad";
+            txtLastName.Size = new Size(100, 23);
+            txtLastName.TabIndex = 2;
+            // 
+            // txtPhone
+            // 
+            txtPhone.Location = new Point(395, 11);
+            txtPhone.Name = "txtPhone";
+            txtPhone.PlaceholderText = "Telefon";
+            txtPhone.Size = new Size(100, 23);
+            txtPhone.TabIndex = 3;
+            // 
+            // dgvSales
+            // 
+            dgvSales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvSales.Dock = DockStyle.Bottom;
+            dgvSales.Location = new Point(167, 144);
+            dgvSales.Name = "dgvSales";
+            dgvSales.ReadOnly = true;
+            dgvSales.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvSales.Size = new Size(727, 379);
+            dgvSales.TabIndex = 4;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -88,6 +132,8 @@
             Load += Form1_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
+            tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvSales).EndInit();
             ResumeLayout(false);
         }
 
@@ -97,5 +143,9 @@
         private TabPage tabPage1;
         private TabPage tabPage2;
         private ListBox lstCustomers;
+        private DataGridView dgvSales;
+        private TextBox txtPhone;
+        private TextBox txtLastName;
+        private TextBox txtFirstName;
     }
 }
