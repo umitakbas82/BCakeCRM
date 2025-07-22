@@ -31,7 +31,7 @@
             tabControl1 = new TabControl();
             tabPage1 = new TabPage();
             tabPage2 = new TabPage();
-            listBox1 = new ListBox();
+            lstCustomers = new ListBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             SuspendLayout();
@@ -40,19 +40,19 @@
             // 
             tabControl1.Controls.Add(tabPage1);
             tabControl1.Controls.Add(tabPage2);
-            tabControl1.Location = new Point(2, 1);
+            tabControl1.Location = new Point(2, 12);
             tabControl1.Name = "tabControl1";
             tabControl1.SelectedIndex = 0;
-            tabControl1.Size = new Size(786, 448);
+            tabControl1.Size = new Size(905, 554);
             tabControl1.TabIndex = 0;
             // 
             // tabPage1
             // 
-            tabPage1.Controls.Add(listBox1);
+            tabPage1.Controls.Add(lstCustomers);
             tabPage1.Location = new Point(4, 24);
             tabPage1.Name = "tabPage1";
             tabPage1.Padding = new Padding(3);
-            tabPage1.Size = new Size(778, 420);
+            tabPage1.Size = new Size(897, 526);
             tabPage1.TabIndex = 0;
             tabPage1.Text = "tabPage1";
             tabPage1.UseVisualStyleBackColor = true;
@@ -62,19 +62,20 @@
             tabPage2.Location = new Point(4, 24);
             tabPage2.Name = "tabPage2";
             tabPage2.Padding = new Padding(3);
-            tabPage2.Size = new Size(192, 72);
+            tabPage2.Size = new Size(778, 420);
             tabPage2.TabIndex = 1;
             tabPage2.Text = "tabPage2";
             tabPage2.UseVisualStyleBackColor = true;
             // 
-            // listBox1
+            // lstCustomers
             // 
-            listBox1.FormattingEnabled = true;
-            listBox1.ItemHeight = 15;
-            listBox1.Location = new Point(6, 6);
-            listBox1.Name = "listBox1";
-            listBox1.Size = new Size(120, 409);
-            listBox1.TabIndex = 0;
+            lstCustomers.Dock = DockStyle.Left;
+            lstCustomers.FormattingEnabled = true;
+            lstCustomers.ItemHeight = 15;
+            lstCustomers.Location = new Point(3, 3);
+            lstCustomers.Name = "lstCustomers";
+            lstCustomers.Size = new Size(164, 520);
+            lstCustomers.TabIndex = 0;
             // 
             // Form1
             // 
@@ -84,6 +85,7 @@
             Controls.Add(tabControl1);
             Name = "Form1";
             Text = "Form1";
+            Load += Form1_Load;
             tabControl1.ResumeLayout(false);
             tabPage1.ResumeLayout(false);
             ResumeLayout(false);
@@ -94,6 +96,6 @@
         private TabControl tabControl1;
         private TabPage tabPage1;
         private TabPage tabPage2;
-        private ListBox listBox1;
+        private ListBox lstCustomers;
     }
 }
