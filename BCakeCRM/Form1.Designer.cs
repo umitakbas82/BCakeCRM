@@ -36,6 +36,11 @@
             txtLastName = new TextBox();
             txtPhone = new TextBox();
             dgvSales = new DataGridView();
+            dtSaleDate = new DateTimePicker();
+            cmbProductType = new ComboBox();
+            txtCost = new TextBox();
+            txtSalePrice = new TextBox();
+            txtProfit = new TextBox();
             tabControl1.SuspendLayout();
             tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvSales).BeginInit();
@@ -53,6 +58,11 @@
             // 
             // tabPage1
             // 
+            tabPage1.Controls.Add(txtProfit);
+            tabPage1.Controls.Add(txtSalePrice);
+            tabPage1.Controls.Add(txtCost);
+            tabPage1.Controls.Add(cmbProductType);
+            tabPage1.Controls.Add(dtSaleDate);
             tabPage1.Controls.Add(dgvSales);
             tabPage1.Controls.Add(txtPhone);
             tabPage1.Controls.Add(txtLastName);
@@ -114,12 +124,52 @@
             // 
             dgvSales.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvSales.Dock = DockStyle.Bottom;
-            dgvSales.Location = new Point(167, 144);
+            dgvSales.Location = new Point(167, 200);
             dgvSales.Name = "dgvSales";
             dgvSales.ReadOnly = true;
             dgvSales.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvSales.Size = new Size(727, 379);
+            dgvSales.Size = new Size(727, 323);
             dgvSales.TabIndex = 4;
+            // 
+            // dtSaleDate
+            // 
+            dtSaleDate.Location = new Point(183, 51);
+            dtSaleDate.Name = "dtSaleDate";
+            dtSaleDate.Size = new Size(148, 23);
+            dtSaleDate.TabIndex = 5;
+            // 
+            // cmbProductType
+            // 
+            cmbProductType.FormattingEnabled = true;
+            cmbProductType.Items.AddRange(new object[] { "Pasta", "Cupcake", "Kurabiye" });
+            cmbProductType.Location = new Point(337, 51);
+            cmbProductType.Name = "cmbProductType";
+            cmbProductType.Size = new Size(85, 23);
+            cmbProductType.TabIndex = 6;
+            // 
+            // txtCost
+            // 
+            txtCost.Location = new Point(428, 51);
+            txtCost.Name = "txtCost";
+            txtCost.PlaceholderText = "Yaklaşık Maliyet";
+            txtCost.Size = new Size(100, 23);
+            txtCost.TabIndex = 7;
+            // 
+            // txtSalePrice
+            // 
+            txtSalePrice.Location = new Point(534, 51);
+            txtSalePrice.Name = "txtSalePrice";
+            txtSalePrice.PlaceholderText = "Satış Fiyatı";
+            txtSalePrice.Size = new Size(100, 23);
+            txtSalePrice.TabIndex = 8;
+            // 
+            // txtProfit
+            // 
+            txtProfit.Location = new Point(640, 51);
+            txtProfit.Name = "txtProfit";
+            txtProfit.PlaceholderText = "Kâr";
+            txtProfit.Size = new Size(100, 23);
+            txtProfit.TabIndex = 9;
             // 
             // Form1
             // 
@@ -147,5 +197,10 @@
         private TextBox txtPhone;
         private TextBox txtLastName;
         private TextBox txtFirstName;
+        private ComboBox cmbProductType;
+        private DateTimePicker dtSaleDate;
+        private TextBox txtProfit;
+        private TextBox txtSalePrice;
+        private TextBox txtCost;
     }
 }
